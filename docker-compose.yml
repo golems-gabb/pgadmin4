@@ -4,8 +4,8 @@ services:
     image: "dpage/pgadmin4:${PG_ADMIN_TAG}"
     container_name: "pgadmin4"
     ports:
-#      - 443:$PG_ADMIN_PORT
-      - 80:$PG_ADMIN_PORT
+#      - $PG_ADMIN_PORT:443
+      - $PG_ADMIN_PORT:80
     volumes:
       - ./pgadmin:/var/lib/pgadmin
 #      - ./.certs/certificate.cert:/certs/server.cert
